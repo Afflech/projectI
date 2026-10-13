@@ -41,3 +41,16 @@ Open the Vite URL and use `http://localhost:8000` as the API base. Without `GEMI
 
 - Design notes: `docs/design.md`
 - Roadmap and progress framework: `docs/project-roadmap.md`
+
+## Local Git
+
+This workspace has an environment-owned `.git` mount, so the project repository metadata lives in `.gitlocal/`.
+
+Use the helper script for Git commands:
+
+```bash
+./git-local.sh status
+./git-local.sh log --oneline
+./git-local.sh add .
+./git-local.sh commit -m "Your message"
+```
