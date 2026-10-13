@@ -9,9 +9,9 @@ Ngay cap nhat gan nhat: 2026-10-13
 | Muc | Trang thai | Ghi chu |
 | --- | --- | --- |
 | Product scope | Da chot MVP | Mini NotebookLM cho sinh vien, hoi dap theo nguon co citation |
-| Backend skeleton | Done co ban | FastAPI, SQLite, routers, services |
-| Frontend skeleton | Done co ban | React/Vite, layout 3 cot |
-| RAG core | In progress | Chunking + local vector search da co, can thay embedding chat luong hon |
+| Backend skeleton | Done | FastAPI import va smoke test service layer da qua |
+| Frontend skeleton | Done co ban | React/Vite build thanh cong |
+| RAG core | Done co ban | Text ingestion, chunking, retrieval, citation lookup da qua smoke test |
 | LLM integration | In progress | Co Gemini provider + mock fallback, can test voi API key that |
 | Evaluation | Planned | Moi co file mau cau hoi |
 | Report/demo | Planned | Can bo sung tai lieu, so do, kich ban demo |
@@ -70,7 +70,7 @@ Tieu chi done:
 - DB khong bi loi foreign key khi xoa notebook/source.
 - Co test manual bang curl hoac script API.
 
-Trang thai hien tai: `In progress`
+Trang thai hien tai: `Done co ban`
 
 ### Phase 2 - Ingestion Pipeline
 
@@ -96,7 +96,7 @@ Tieu chi done:
 - Source loi hien `failed` kem message.
 - Co the doi chunk size/overlap qua env.
 
-Trang thai hien tai: `In progress`
+Trang thai hien tai: `Done co ban voi text source, can test PDF thuc te`
 
 ### Phase 3 - Retrieval Va Citation
 
@@ -121,7 +121,7 @@ Tieu chi done:
 - Citation bam duoc va hien doan goc + page.
 - Co it nhat 5 cau hoi test tay qua nhieu source.
 
-Trang thai hien tai: `In progress`
+Trang thai hien tai: `Done co ban`
 
 ### Phase 4 - LLM Answering
 
@@ -146,7 +146,7 @@ Tieu chi done:
 - Cau tra loi khong tu che khi context khong co thong tin.
 - History luu lai user va assistant message.
 
-Trang thai hien tai: `In progress`
+Trang thai hien tai: `In progress - mock provider da qua smoke test, can Gemini key`
 
 ### Phase 5 - Frontend MVP
 
@@ -172,7 +172,7 @@ Tieu chi done:
 - UI khong vo layout o desktop va mobile co ban.
 - Co loading/error state cho upload, ingest, chat.
 
-Trang thai hien tai: `In progress`
+Trang thai hien tai: `Done co ban - Vite build thanh cong, can manual browser test`
 
 ### Phase 6 - Tinh Nang Mo Rong
 
