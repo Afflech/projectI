@@ -1,0 +1,8 @@
+[
+  {
+    "question": "What is the main definition introduced in the source?",
+    "expected_source": "sample.pdf",
+    "expected_page": 1,
+    "expected_evidence": "Paste the exact supporting passage here"
+  }
+]
