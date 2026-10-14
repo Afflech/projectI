@@ -4,7 +4,7 @@ Tai lieu nay la khung dieu hanh du an tu luc khoi tao den khi hoan thien san pha
 
 ## 1. Trang Thai Tong Quan
 
-Ngay cap nhat gan nhat: 2026-10-13
+Ngay cap nhat gan nhat: 2026-10-14
 
 | Muc | Trang thai | Ghi chu |
 | --- | --- | --- |
@@ -13,8 +13,8 @@ Ngay cap nhat gan nhat: 2026-10-13
 | Frontend skeleton | Done co ban | React/Vite build thanh cong |
 | RAG core | Done co ban | Text ingestion, chunking, retrieval, citation lookup da qua smoke test |
 | LLM integration | In progress | Co Gemini provider + mock fallback, can test voi API key that |
-| Evaluation | Planned | Moi co file mau cau hoi |
-| Report/demo | Planned | Can bo sung tai lieu, so do, kich ban demo |
+| Evaluation | In progress | Co demo sources va 7 cau hoi manual trong `demo_sources/` |
+| Report/demo | In progress | Da co checklist demo voi flow PDF/TXT/paste |
 
 Quy uoc trang thai:
 
@@ -96,7 +96,7 @@ Tieu chi done:
 - Source loi hien `failed` kem message.
 - Co the doi chunk size/overlap qua env.
 
-Trang thai hien tai: `Done co ban voi text source, can test PDF thuc te`
+Trang thai hien tai: `Done co ban - PDF text source da duoc smoke test voi page metadata`
 
 ### Phase 3 - Retrieval Va Citation
 
@@ -121,7 +121,7 @@ Tieu chi done:
 - Citation bam duoc va hien doan goc + page.
 - Co it nhat 5 cau hoi test tay qua nhieu source.
 
-Trang thai hien tai: `Done co ban`
+Trang thai hien tai: `Done co ban - PDF citation page metadata da duoc smoke test`
 
 ### Phase 4 - LLM Answering
 
@@ -172,7 +172,7 @@ Tieu chi done:
 - UI khong vo layout o desktop va mobile co ban.
 - Co loading/error state cho upload, ingest, chat.
 
-Trang thai hien tai: `Done co ban - Vite build thanh cong, can manual browser test`
+Trang thai hien tai: `Done co ban - Vite build thanh cong, can chay browser checklist tren may demo`
 
 ### Phase 6 - Tinh Nang Mo Rong
 
@@ -222,7 +222,7 @@ Tieu chi done:
 - Cac loi pho bien co message de hieu.
 - Chay lai tu clone moi theo README duoc.
 
-Trang thai hien tai: `Planned`
+Trang thai hien tai: `In progress - da co checklist demo va failed-source message tren UI`
 
 ### Phase 8 - Evaluation Va Bao Cao
 

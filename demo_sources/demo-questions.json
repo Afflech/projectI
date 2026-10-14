@@ -1,0 +1,39 @@
+[
+  {
+    "question": "What source paths does the MVP support for the demo?",
+    "expected_source": "demo-study-notes.md",
+    "expected_evidence": "PDF upload, TXT/MD upload, and pasted text"
+  },
+  {
+    "question": "What should happen after disabling a source?",
+    "expected_source": "demo-study-notes.md",
+    "expected_evidence": "remove it from future answers and citations"
+  },
+  {
+    "question": "What is the clearest success signal for the Project I demo?",
+    "expected_source": "demo-study-notes.md",
+    "expected_evidence": "answer with a clickable citation"
+  },
+  {
+    "question": "Why is the offline mock provider acceptable for the MVP demo?",
+    "expected_source": "pasted-text-sample.txt",
+    "expected_evidence": "still exercises retrieval, source filtering, citations, and history persistence"
+  },
+  {
+    "question": "Is a real Gemini API key required to validate the citation flow?",
+    "expected_source": "pasted-text-sample.txt",
+    "expected_evidence": "not required to validate the citation flow"
+  },
+  {
+    "question": "What does page one of the PDF say about retrieval augmented generation?",
+    "expected_source": "project_i_rag_notes.pdf",
+    "expected_page": 1,
+    "expected_evidence": "grounds answers in enabled sources"
+  },
+  {
+    "question": "What limitation does page two of the PDF mention?",
+    "expected_source": "project_i_rag_notes.pdf",
+    "expected_page": 2,
+    "expected_evidence": "scanned PDFs without OCR may fail"
+  }
+]

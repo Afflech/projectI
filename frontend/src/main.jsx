@@ -249,7 +249,10 @@ function App() {
             <div className="source-item" key={source.id}>
               <button className="source-main" onClick={() => setSelectedSource(source)}>
                 <span>{source.title}</span>
-                <small>{source.status}{source.page ? ` page ${source.page}` : ""}</small>
+                <small>
+                  {source.status}
+                  {source.status === "failed" && source.error ? `: ${source.error}` : ""}
+                </small>
               </button>
               <button
                 className={source.enabled ? "toggle enabled" : "toggle"}

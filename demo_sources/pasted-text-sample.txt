@@ -1,0 +1,6 @@
+Paste this text into the app as a source named "Demo Pasted Text".
+
+The pasted source says that the offline mock provider is acceptable for the MVP
+demo because it still exercises retrieval, source filtering, citations, and
+history persistence. A real Gemini API key is useful for answer quality, but it
+is not required to validate the citation flow.
