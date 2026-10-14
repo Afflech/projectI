@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .config import ensure_dirs
+from .config import CORS_ORIGIN_REGEX, CORS_ORIGINS, ensure_dirs
 from .db import init_db
 from .routers import chat, chunks, notebooks, sources
 
@@ -12,7 +12,8 @@ def create_app() -> FastAPI:
     app = FastAPI(title="Mini NotebookLM API")
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+        allow_origins=CORS_ORIGINS,
+        allow_origin_regex=CORS_ORIGIN_REGEX,
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],

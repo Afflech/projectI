@@ -16,6 +16,18 @@ CHUNK_TOKENS = int(os.getenv("CHUNK_TOKENS", "320"))
 CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "64"))
 TOP_K = int(os.getenv("TOP_K", "5"))
 EMBEDDING_DIM = int(os.getenv("EMBEDDING_DIM", "384"))
+CORS_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv(
+        "CORS_ORIGINS",
+        "http://localhost:5173,http://127.0.0.1:5173,http://0.0.0.0:5173",
+    ).split(",")
+    if origin.strip()
+]
+CORS_ORIGIN_REGEX = os.getenv(
+    "CORS_ORIGIN_REGEX",
+    r"^https?://(localhost|127\.0\.0\.1|0\.0\.0\.0):\d+$",
+)
 
 
 def ensure_dirs() -> None:
