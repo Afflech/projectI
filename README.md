@@ -10,6 +10,18 @@ Mini NotebookLM is a Project I web app for source-grounded study Q&A. Users crea
 
 ## Run
 
+Docker:
+
+```bash
+./scripts/install-docker-ubuntu.sh
+./scripts/docker-up.sh
+```
+
+Open `http://localhost:5173`. Backend data is stored in `backend/data/`.
+Stop with `./scripts/docker-down.sh`.
+
+Manual:
+
 ```bash
 cd backend
 python3 -m venv .venv
@@ -42,6 +54,7 @@ Open the Vite URL and use `http://localhost:8000` as the API base. Without `GEMI
 - Design notes: `docs/design.md`
 - Roadmap and progress framework: `docs/project-roadmap.md`
 - Phase progress report: `docs/phase-progress-report.md`
+- Docker setup: `docs/docker-setup.md`
 - MVP smoke test checklist: `docs/mvp-smoke-test.md`
 
 ## Local Git

@@ -191,6 +191,8 @@ Da hoan thanh:
 - Source failed hien error message de de debug.
 - `.env` khong duoc commit; `.env.example` co bien cau hinh can thiet.
 - Da sua CORS preflight cho dev origins/ports.
+- Da bo sung Dockerfile cho backend/frontend, `docker-compose.yml`, va helper scripts
+  de cai Docker, start/stop container.
 - Backend smoke test va frontend build chay duoc lap lai.
 
 Rui ro con lai:
@@ -230,6 +232,7 @@ Da chuan bi:
 - Repo da push len GitHub remote `Afflech/projectI`.
 - Co demo checklist va demo sources.
 - Backend/frontend co lenh run ro rang.
+- Co cau hinh Docker Compose de chay backend/frontend cung luc.
 
 Can lam truoc ngay demo:
 

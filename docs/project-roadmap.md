@@ -14,7 +14,7 @@ Ngay cap nhat gan nhat: 2026-10-14
 | RAG core | Done co ban | Text ingestion, chunking, retrieval, citation lookup da qua smoke test |
 | LLM integration | In progress | Co Gemini provider + mock fallback, can test voi API key that |
 | Evaluation | In progress | Co demo sources va 7 cau hoi manual trong `demo_sources/` |
-| Report/demo | In progress | Da co checklist demo voi flow PDF/TXT/paste |
+| Report/demo | In progress | Da co checklist demo voi flow PDF/TXT/paste va Docker Compose |
 
 Quy uoc trang thai:
 
@@ -222,7 +222,7 @@ Tieu chi done:
 - Cac loi pho bien co message de hieu.
 - Chay lai tu clone moi theo README duoc.
 
-Trang thai hien tai: `In progress - da co checklist demo va failed-source message tren UI`
+Trang thai hien tai: `In progress - da co checklist demo, failed-source message va Docker Compose`
 
 ### Phase 8 - Evaluation Va Bao Cao
 
@@ -249,7 +249,7 @@ Tieu chi done:
 - Slide co flow demo ro.
 - Co danh sach rui ro va cach xu ly khi demo loi.
 
-Trang thai hien tai: `Planned`
+Trang thai hien tai: `In progress - da co Docker Compose va helper scripts de chay demo local`
 
 ### Phase 9 - Release Demo
 
