@@ -66,3 +66,20 @@ docker compose build --no-cache
 
 After installing Docker, Linux may require logging out and back in before your
 user can run Docker without `sudo`.
+
+## Docker Desktop GUI
+
+If you want Docker Desktop for visual container management on Ubuntu, run:
+
+```bash
+./scripts/install-docker-desktop-ubuntu.sh
+```
+
+Then log out and back in, open Docker Desktop from the application menu, and
+accept the Docker Desktop terms. Docker Desktop uses a separate Docker context
+named `desktop-linux`; use `docker context ls` to switch between Docker Desktop
+and the system Docker Engine.
+
+When Docker Desktop is open, avoid running the same Compose app in the system
+Docker Engine at the same time because both can try to bind ports `5173` and
+`8000`.

@@ -20,6 +20,12 @@ Docker:
 Open `http://localhost:5173`. Backend data is stored in `backend/data/`.
 Stop with `./scripts/docker-down.sh`.
 
+Docker Desktop GUI:
+
+```bash
+./scripts/install-docker-desktop-ubuntu.sh
+```
+
 Manual:
 
 ```bash
