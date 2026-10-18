@@ -61,6 +61,7 @@ Open the Vite URL and use `http://localhost:8000` as the API base. Without `GEMI
 - Roadmap and progress framework: `docs/project-roadmap.md`
 - Phase progress report: `docs/phase-progress-report.md`
 - Docker setup: `docs/docker-setup.md`
+- Docker phase audit: `docs/docker-phase-audit-report.md`
 - MVP smoke test checklist: `docs/mvp-smoke-test.md`
 
 ## Local Git
