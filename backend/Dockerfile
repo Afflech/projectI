@@ -10,8 +10,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+COPY requirements.docker.txt .
+RUN pip install -r requirements.docker.txt
 
 COPY app ./app
 COPY scripts ./scripts

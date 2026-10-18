@@ -40,8 +40,12 @@ The backend stores SQLite data, uploads, and vectors in `backend/data/`.
 
 ## Optional Gemini Key
 
-The app works without `GEMINI_API_KEY` by using the mock provider. To test Gemini
-inside Docker:
+The Docker image is optimized for the offline demo path: it uses the mock LLM
+provider by default and the NumPy vector-search fallback. This keeps first-time
+container builds much faster than installing FAISS and the Gemini SDK.
+
+To test Gemini inside Docker, add `google-generativeai` to
+`backend/requirements.docker.txt`, rebuild, and pass the API key:
 
 ```bash
 GEMINI_API_KEY=your_key docker compose up --build
