@@ -6,6 +6,10 @@ if ! command -v docker >/dev/null 2>&1; then
   exit 1
 fi
 
+if ! docker compose version >/dev/null 2>&1 && getent group docker | grep -q "\b${USER}\b"; then
+  exec sg docker -c "cd '$(pwd)' && DOCKER_UID='$(id -u)' DOCKER_GID='$(id -g)' ./scripts/docker-up.sh"
+fi
+
 if ! docker compose version >/dev/null 2>&1; then
   echo "Docker Compose plugin is not available. Run: ./scripts/install-docker-ubuntu.sh"
   exit 1
