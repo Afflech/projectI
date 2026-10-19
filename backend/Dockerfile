@@ -10,8 +10,12 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
+ARG INSTALL_GEMINI=false
+
 COPY requirements.docker.txt .
-RUN pip install -r requirements.docker.txt
+COPY requirements.gemini.txt .
+RUN pip install -r requirements.docker.txt \
+    && if [ "$INSTALL_GEMINI" = "true" ]; then pip install -r requirements.gemini.txt; fi
 
 COPY app ./app
 COPY scripts ./scripts

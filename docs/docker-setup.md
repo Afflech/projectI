@@ -80,6 +80,39 @@ accept the Docker Desktop terms. Docker Desktop uses a separate Docker context
 named `desktop-linux`; use `docker context ls` to switch between Docker Desktop
 and the system Docker Engine.
 
+Check readiness:
+
+```bash
+./scripts/docker-desktop-doctor.sh
+```
+
+Start this project in Docker Desktop:
+
+```bash
+./scripts/docker-desktop-up.sh
+```
+
+The containers will appear in Docker Desktop after the first build finishes.
+Open the app at `http://localhost:5173`.
+
+Stop the Docker Desktop stack:
+
+```bash
+./scripts/docker-desktop-down.sh
+```
+
 When Docker Desktop is open, avoid running the same Compose app in the system
 Docker Engine at the same time because both can try to bind ports `5173` and
 `8000`.
+
+To use Gemini in the Docker image instead of the mock provider:
+
+```bash
+GEMINI_API_KEY=your_key docker compose -f docker-compose.yml -f docker-compose.gemini.yml up --build
+```
+
+For reproducible Docker Desktop installer downloads, pass a checksum:
+
+```bash
+DOCKER_DESKTOP_DEB_SHA256=expected_sha256 ./scripts/install-docker-desktop-ubuntu.sh
+```

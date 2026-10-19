@@ -29,6 +29,10 @@ sudo apt-get install -y ca-certificates curl gnome-terminal
 echo "Downloading Docker Desktop package to $deb_path..."
 curl -fL "https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb" -o "$deb_path"
 
+if [ -n "${DOCKER_DESKTOP_DEB_SHA256:-}" ]; then
+  echo "${DOCKER_DESKTOP_DEB_SHA256}  ${deb_path}" | sha256sum -c -
+fi
+
 echo "Installing Docker Desktop..."
 sudo apt-get install -y "$deb_path"
 

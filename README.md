@@ -24,6 +24,7 @@ Docker Desktop GUI:
 
 ```bash
 ./scripts/install-docker-desktop-ubuntu.sh
+./scripts/docker-desktop-up.sh
 ```
 
 Manual:

@@ -220,29 +220,40 @@ groups
 
 ### Finding 4 - Docker Desktop Installer Download `.deb` Moi Nhat
 
-Muc do: Low.
+Muc do: Low da giam nhe.
 
 Script tai file Docker Desktop `.deb` moi nhat tu URL cua Docker. Tien loi cho setup,
-nhung khong pin version/checksum.
+nhung mac dinh van khong pin version/checksum.
 
-Khuyen nghi:
+Da bo sung:
 
-- Chap nhan cho moi truong dev/demo.
-- Neu can reproducible setup, pin URL version cu the va checksum.
+- `scripts/install-docker-desktop-ubuntu.sh` ho tro bien
+  `DOCKER_DESKTOP_DEB_SHA256`.
+- Neu bien nay duoc truyen vao, script se chay `sha256sum -c` truoc khi install.
+
+Rui ro con lai:
+
+- Can tu cung cap checksum ky vong neu muon reproducible/security strict.
 
 ### Finding 5 - Docker Image Demo Khong Co Gemini SDK Mac Dinh
 
-Muc do: Low.
+Muc do: Low da duoc kiem soat.
 
 Docker image demo duoc toi uu cho mock provider. Neu user set `LLM_PROVIDER=gemini`
 va `GEMINI_API_KEY` ma chua them `google-generativeai` vao requirements Docker, request
 Gemini se loi import.
 
-Khuyen nghi:
+Da bo sung:
 
-- De demo MVP: giu `LLM_PROVIDER=mock`.
-- De test Gemini trong Docker: them `google-generativeai==0.8.3` vao
-  `backend/requirements.docker.txt`, rebuild.
+- `backend/requirements.gemini.txt`
+- `docker-compose.gemini.yml`
+- Backend Dockerfile co `INSTALL_GEMINI=true` build arg.
+
+Dung Gemini trong Docker:
+
+```bash
+GEMINI_API_KEY=your_key docker compose -f docker-compose.yml -f docker-compose.gemini.yml up --build
+```
 
 ## 6. Cach Chay Sau Phase Nay
 
@@ -293,8 +304,8 @@ docker context use default
 
 Uu tien cao:
 
-- Chay `./scripts/docker-up.sh` trong context `desktop-linux` va xac nhan stack hien
-  trong Docker Desktop GUI.
+- Chay `./scripts/docker-desktop-up.sh` va xac nhan stack hien trong Docker Desktop
+  GUI.
 - Chup screenshot Docker Desktop containers cho bao cao/demo neu can.
 
 Uu tien trung binh:
