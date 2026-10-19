@@ -95,6 +95,9 @@ Start this project in Docker Desktop:
 The containers will appear in Docker Desktop after the first build finishes.
 Open the app at `http://localhost:5173`.
 
+Docker Desktop uses a named volume for backend data, so it does not require
+sharing the `/data/...` project path in Docker Desktop File Sharing.
+
 Stop the Docker Desktop stack:
 
 ```bash

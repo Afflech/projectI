@@ -47,4 +47,4 @@ for port in 5173 8000; do
 done
 
 docker context use desktop-linux >/dev/null
-docker compose up --build
+docker compose -f docker-compose.yml -f docker-compose.desktop.yml up --build

@@ -1,0 +1,10 @@
+services:
+  backend:
+    user: "0:0"
+    volumes: !override
+      - backend-data:/app/data
+  frontend:
+    volumes: !override []
+
+volumes:
+  backend-data:

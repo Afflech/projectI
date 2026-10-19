@@ -11,4 +11,4 @@ if ! docker context inspect desktop-linux >/dev/null 2>&1; then
   exit 1
 fi
 
-docker --context desktop-linux compose down
+docker --context desktop-linux compose -f docker-compose.yml -f docker-compose.desktop.yml down
